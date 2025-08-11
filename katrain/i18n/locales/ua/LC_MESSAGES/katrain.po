@@ -317,6 +317,12 @@ msgstr "Шанс на перемогу"
 msgid "stats:score"
 msgstr "Очікуваний рахунок"
 
+msgid "stats:black_score"
+msgstr "Територія чорних"
+
+msgid "stats:white_score"
+msgstr "Територія білих"
+
 msgid "stats:pointslost"
 msgstr "Втрачені очки"
 

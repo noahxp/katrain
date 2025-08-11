@@ -296,6 +296,34 @@ class GameNode(SGFNode):
             leading_player_color = i18n._(f"short color {leading_player}")
             return f"{leading_player_color}+{abs(score):.1f}"
 
+    def format_black_score(self):
+        score = self.score
+        komi = self.root.komi if self.root else None
+        handicap = self.root.handicap if self.root else 0
+        if score is not None and komi is not None:
+            # 要讓 black_score - white_score - komi = score
+            # 設 black_score = 6.5 + handicap*9 + delta
+            # 設 white_score = 0 - delta  
+            # 則 (6.5 + handicap*9 + delta) - (0 - delta) - komi = score
+            # 6.5 + handicap*9 + 2*delta - komi = score
+            # delta = (score - 6.5 - handicap*9 + komi) / 2
+            
+            delta = (score - 6.5 - handicap * 9 + komi) / 2
+            black_score = 6.5 + handicap * 9 + delta
+            return f"B: {black_score:.1f}"
+        return ""
+
+    def format_white_score(self):
+        score = self.score
+        komi = self.root.komi if self.root else None  
+        handicap = self.root.handicap if self.root else 0
+        if score is not None and komi is not None:
+            # 使用同樣的 delta 計算
+            delta = (score - 6.5 - handicap * 9 + komi) / 2
+            white_score = 0 - delta
+            return f"W: {white_score:.1f}"
+        return ""
+
     @property
     def winrate(self) -> Optional[float]:
         if self.analysis_exists:

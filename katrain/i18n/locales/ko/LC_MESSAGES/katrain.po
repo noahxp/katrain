@@ -172,6 +172,12 @@ msgstr "승리 확률"
 msgid "stats:score"
 msgstr "예상 집 차이"
 
+msgid "stats:black_score"
+msgstr "흑의 집수"
+
+msgid "stats:white_score"
+msgstr "백의 집수"
+
 msgid "stats:pointslost"
 msgstr "집 손해"
 

@@ -201,6 +201,12 @@ msgstr "勝率"
 msgid "stats:score"
 msgstr "推定目差"
 
+msgid "stats:black_score"
+msgstr "黒の目数"
+
+msgid "stats:white_score"
+msgstr "白の目数"
+
 msgid "stats:pointslost"
 msgstr "損失目数"
 

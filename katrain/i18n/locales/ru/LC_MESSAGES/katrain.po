@@ -197,6 +197,12 @@ msgstr "Доля побед"
 msgid "stats:score"
 msgstr "Оценка очков"
 
+msgid "stats:black_score"
+msgstr "Территория чёрных"
+
+msgid "stats:white_score"
+msgstr "Территория белых"
+
 msgid "stats:pointslost"
 msgstr "Потерянные очки"
 

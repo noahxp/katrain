@@ -175,6 +175,12 @@ msgstr "Pronóstico"
 msgid "stats:score"
 msgstr "Puntaje"
 
+msgid "stats:black_score"
+msgstr "Territorio Negro"
+
+msgid "stats:white_score"
+msgstr "Territorio Blanco"
+
 msgid "stats:pointslost"
 msgstr "Perdidas"
 

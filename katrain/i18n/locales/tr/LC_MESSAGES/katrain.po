@@ -300,6 +300,12 @@ msgstr "Kazanma Oranı"
 msgid "stats:score"
 msgstr "Tahmini Skor"
 
+msgid "stats:black_score"
+msgstr "Siyah Bölge"
+
+msgid "stats:white_score"
+msgstr "Beyaz Bölge"
+
 msgid "stats:pointslost"
 msgstr "Kaybedilen Puan"
 

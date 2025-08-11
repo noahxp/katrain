@@ -190,6 +190,12 @@ msgstr "Pronostic "
 msgid "stats:score"
 msgstr "Score"
 
+msgid "stats:black_score"
+msgstr "Territoire Noir"
+
+msgid "stats:white_score"
+msgstr "Territoire Blanc"
+
 msgid "stats:pointslost"
 msgstr "Perte"
 

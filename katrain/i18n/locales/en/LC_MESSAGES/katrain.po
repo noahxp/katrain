@@ -323,6 +323,12 @@ msgstr "Win Rate"
 msgid "stats:score"
 msgstr "Estimated Score"
 
+msgid "stats:black_score"
+msgstr "Black Score"
+
+msgid "stats:white_score"
+msgstr "White Score"
+
 msgid "stats:pointslost"
 msgstr "Points Lost"
 

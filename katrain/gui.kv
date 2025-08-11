@@ -485,7 +485,7 @@
 <StatsBox>
     orientation: 'vertical'
     background_color: Theme.BOX_BACKGROUND_COLOR
-    labels: {'score':score_label,'winrate':winrate_label,'points':pointloss_label}
+    labels: {'score':score_label,'winrate':winrate_label,'black_score':black_score_label,'white_score':white_score_label,'points':pointloss_label}
     StatsLabel:
         id: winrate_label
         label: i18n._('stats:winrate')
@@ -495,6 +495,16 @@
         id: score_label
         label: i18n._('stats:score')
         text: root.score
+        color: Theme.SCORE_COLOR
+    StatsLabel:
+        id: black_score_label
+        label: i18n._('stats:black_score')
+        text: root.black_score
+        color: Theme.SCORE_COLOR
+    StatsLabel:
+        id: white_score_label
+        label: i18n._('stats:white_score')
+        text: root.white_score
         color: Theme.SCORE_COLOR
     StatsLabel:
         id: pointloss_label
@@ -623,13 +633,13 @@
             height: root.graph_height
     CollapsablePanel:
         id: stats_panel
-        num_active: 3
+        num_active: 5
         content_height: self.num_active * root.stat_height + EPSILON
         options_height: root.tab_option_height
         closed_label: 'closedlabel:movestats'
-        options: ['score','winrate','points']
-        option_colors: [Theme.SCORE_COLOR,Theme.WINRATE_COLOR,Theme.POINTLOSS_COLOR]
-        option_active: [True,True,True]
+        options: ['score','winrate','black_score','white_score','points']
+        option_colors: [Theme.SCORE_COLOR,Theme.WINRATE_COLOR,Theme.SCORE_COLOR,Theme.SCORE_COLOR,Theme.POINTLOSS_COLOR]
+        option_active: [True,True,True,True,True]
         on_option_state:
             for k, v in args[1].items(): stats.labels[k].hidden = not v
             self.num_active = sum(args[1].values(),0)

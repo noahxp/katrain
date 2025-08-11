@@ -244,6 +244,12 @@ msgstr "勝率"
 msgid "stats:score"
 msgstr "預估分數"
 
+msgid "stats:black_score"
+msgstr "黑棋目數"
+
+msgid "stats:white_score"
+msgstr "白棋目數"
+
 msgid "stats:pointslost"
 msgstr "目數損失"
 
