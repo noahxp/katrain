@@ -115,17 +115,17 @@ class KataGoEngine(BaseEngine):
         if config.get("altcommand", ""):
             self.command = config["altcommand"]
             self.shell = True
-        else:    
+        else:
             model = find_package_resource(config["model"])
             cfg = find_package_resource(config["config"])
             exe = self.get_engine_path(config.get("katago", "").strip())
-            
+
             if not exe:
                 return
-                
+
             # Add human model to command if provided
             if config.get("humanlike_model", ""):
-                human_model_path = find_package_resource(config.get("humanlike_model",""))
+                human_model_path = find_package_resource(config.get("humanlike_model", ""))
                 if os.path.isfile(human_model_path):
                     self.command = shlex.split(
                         f'"{exe}" analysis -model "{model}" -human-model "{human_model_path}" -config "{cfg}" -override-config "homeDataDir={os.path.expanduser(DATA_FOLDER)}"'
